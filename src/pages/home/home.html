@@ -1,14 +1,16 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Code Scanner
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <p>A simple code scanner.</p>
+  <button ion-button (click)="scan()" full>Scan</button>
+  <div *ngIf="scannerData">
+    <p>Scanned Text: {{ scannerData.text }} </p>
+    <p>Scanned Format: {{ scannerData.format }} </p>
+  </div>
 </ion-content>
